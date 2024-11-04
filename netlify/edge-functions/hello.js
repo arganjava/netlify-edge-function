@@ -1,5 +1,6 @@
 export default async (request, context) => {
-  context.log("BODY", request.body);
+  const body = await request.json();
+  context.log("BODY", body);
     context.log("URL", request.url);
   return Response.json({ hello: "world" });
 };
