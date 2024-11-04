@@ -1,4 +1,4 @@
-export default async (request, context) => {
+export default async (request: Request, context: Context) => {
   const body = await request.json();
   context.log("BODY", body);
     context.log("URL", request.url);
